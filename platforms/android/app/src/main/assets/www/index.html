@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>Enthalpy</title>
+    <!-- Path to Framework7 Library CSS -->
+    <link rel="stylesheet" href="css/framework7.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!-- App root element -->
+    <div id="app">
+      <!-- Statusbar overlay -->
+      <div class="statusbar"></div>
+
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main">
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-name="home" class="page">
+
+          <!-- Top Navbar -->
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title">Experimento: Calor de Dissolução</div>
+            </div>
+          </div>
+
+          <!-- Toolbar -->
+          <div class="toolbar">
+            <div class="toolbar-inner">
+              <!-- Toolbar links -->
+              <button class="button">Link 1</button>
+              <button class="button">Link 2</button>
+            </div>
+          </div>
+          <!-- Scrollable page content -->
+          <div class="page-content">
+            <table class="table">
+              <tr>
+                <td colspan="2">
+                  <div class="tdtext title">Dados do Experimento</div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="tdtext">Massa da água:</div>
+                </td>
+                <td>
+                  <div class="tdtext">100g</div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="tdtext">Capacidade Térmica do calorímetro:</div>
+                </td>
+                <td>
+                  <div class="tdtext">cal/g ºC</div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="tdtext">Massa do sal:</div>
+                </td>
+                <td>
+                  <div class="tdtext">9,8g</div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="tdtext">Sal: Carbonato de amônio</div>
+                </td>
+                <td>
+                  <button class="button tdbutton">ADICIONAR SAL</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="tdtext">Sal: NUM SEI</div>
+                </td>
+                <td>
+                  <button class="button tdbutton">SAL 1</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="tdtext">Agitação magnética</div>
+                </td>
+                <td>
+                  <button class="button tdbutton-inline-block">Iniciar</button>
+                  <button class="button tdbutton-inline-block">Desligar</button>
+                </td>
+              </tr>
+            </table>
+            <table class="table">
+              <tr>
+                <td>
+                  <button class="button tdbutton-inline-block">Ler Temperatura</button>
+                  <button class="button tdbutton-inline-block">Finalizar Leitura</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <iframe id="youtube" style="border: 1px solid #cccccc;" src="https://www.youtube.com/embed/LNYKQdhVnGk?wmode=transparent"></iframe>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <iframe id="graph" style="border: 1px solid #cccccc;"  src="https://thingspeak.com/channels/ 429230/charts/7?api_key= N0Z8LZH6EIJL2FQT&dynamic=true"> II</iframe>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/scripts.js"></script>
+  </body>
+</html>
