@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/framework7.min.css">
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <body>
     <!-- App root element -->
@@ -77,7 +78,7 @@
                   <div class="tdtext">Sal: Carbonato de amônio</div>
                 </td>
                 <td>
-                  <button class="button tdbutton">ADICIONAR SAL</button>
+                  <button class="button tdbutton" onclick="lightSAL(this)">ADICIONAR SAL</button>
                 </td>
               </tr>
               <tr>
@@ -85,7 +86,7 @@
                   <div class="tdtext">Sal: NUM SEI</div>
                 </td>
                 <td>
-                  <button class="button tdbutton">SAL 1</button>
+                  <button class="button tdbutton" onclick="SALA(this)">SAL 1</button>
                 </td>
               </tr>
               <tr>
@@ -93,16 +94,16 @@
                   <div class="tdtext">Agitação magnética</div>
                 </td>
                 <td>
-                  <button class="button tdbutton-inline-block">Iniciar</button>
-                  <button class="button tdbutton-inline-block">Desligar</button>
+                  <button class="button tdbutton-inline-block" onclick="lightACENDE(this)">Iniciar</button>
+                  <button class="button tdbutton-inline-block" onclick="lightAPAGA(this)">Desligar</button>
                 </td>
               </tr>
             </table>
             <table class="table">
               <tr>
                 <td>
-                  <button class="button tdbutton-inline-block">Ler Temperatura</button>
-                  <button class="button tdbutton-inline-block">Finalizar Leitura</button>
+                  <button class="button tdbutton-inline-block" onclick="lightTEMP7()">Ler Temperatura</button>
+                  <button class="button tdbutton-inline-block" onclick="lightTEMPZERO()">Finalizar Leitura</button>
                 </td>
               </tr>
               <tr>
@@ -125,4 +126,89 @@
     <!-- Path to your app js-->
     <script type="text/javascript" src="js/scripts.js"></script>
   </body>
+  <script type="text/javascript">
+
+    function lightLIGAR(botao){
+            var botoes
+      botoes = document.getElementsByTagName("button");
+    for (var i = 0; i < botoes.length; i++)
+      {
+             botoes[i].disabled == true?(botoes[i].disabled = false):0;
+      }
+      botao.disabled = "disabled";
+    
+    $.post('http://api.thingspeak.com/talkbacks/24759/commands.json?api_key=LS4JXCOF1NXI1KWN&command_string=LIGAR');
+                }
+    
+    
+    function lightDESLIGAR(botao){
+    var botoes
+      botoes = document.getElementsByTagName("button");
+      for (var i = 0; i < botoes.length; i++)
+      {
+             botoes[i].disabled == true?(botoes[i].disabled = false):0;
+      }
+      botao.disabled = "disabled";
+    
+    $.post('http://api.thingspeak.com/talkbacks/24759/commands.json?api_key=LS4JXCOF1NXI1KWN&command_string=DESLIGAR');
+                     }   
+    
+    
+    
+    
+    function lightACENDE(botao){
+    var botoes
+      botoes = document.getElementsByTagName("button");
+      for (var i = 0; i < botoes.length; i++)
+      {
+             botoes[i].disabled == true?(botoes[i].disabled = false):0;
+      }
+      botao.disabled = "disabled";
+    
+     $.post('http://api.thingspeak.com/talkbacks/24759/commands.json?api_key=LS4JXCOF1NXI1KWN&command_string=ACENDE');
+    
+                     }    
+    
+    function lightAPAGA(botao){
+    var botoes
+      botoes = document.getElementsByTagName("button");
+      for (var i = 0; i < botoes.length; i++)
+      {
+             botoes[i].disabled == true?(botoes[i].disabled = false):0;
+      }
+      botao.disabled = "disabled";
+    
+     $.post('http://api.thingspeak.com/talkbacks/24759/commands.json?api_key=LS4JXCOF1NXI1KWN&command_string=APAGA');
+    
+                     }    
+    
+    
+    function lightSAL(botao){
+    var botoes
+      botoes = document.getElementsByTagName("button");
+      for (var i = 0; i < botoes.length; i++)
+      {
+             botoes[i].disabled == true?(botoes[i].disabled = false):0;
+      }
+    
+      botao.disabled = "disabled";
+    
+    $.post('http://api.thingspeak.com/talkbacks/24759/commands.json?api_key=LS4JXCOF1NXI1KWN&command_string=SAL ');
+                     }      
+    
+       
+    function lightTEMP7(){
+      $.post('http://api.thingspeak.com/talkbacks/24759/commands.json?api_key=LS4JXCOF1NXI1KWN&command_string=TEMP7 ');
+    }
+      
+    function lightTEMPZERO(){
+      $.post('http://api.thingspeak.com/talkbacks/24759/commands.json?api_key=LS4JXCOF1NXI1KWN&command_string=TEMPZERO ');
+    }
+     
+      function SALA(){
+      $.post('http://api.thingspeak.com/talkbacks/35051/commands.json?api_key=HYGJV64B5XNRDPGO&command_string=SAL1 ');
+    }
+    
+    
+    </script>
 </html>
