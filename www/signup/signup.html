@@ -10,9 +10,9 @@
     <!-- Your app title -->
     <title>Enthalpy</title>
     <!-- Path to Framework7 Library CSS -->
-    <link rel="stylesheet" href="css/framework7.min.css">
+    <link rel="stylesheet" href="../css/framework7.min.css">
     <!-- Path to your custom app styles-->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
     <!-- App root element -->
@@ -36,19 +36,22 @@
           <div class="toolbar">
             <div class="toolbar-inner">
               <!-- Toolbar links -->
-              <button class="button" onclick="document.location = 'login/login.html'">Fazer Login</button>
-              <button class="button" onclick="document.location = 'signup/signup.html'">Criar Conta</button>
             </div>
           </div>
           <!-- Scrollable page content -->
           <div class="page-content">
+              <div class="text" style="text-align: left;">Tipo de usuário: </div>
+              <input type="radio" id="professor" name="tipoUsuario" value="professor">
+              <label class="text" for="professor">Professor</label><br>
+              <input type="radio" id="aluno" name="tipoUsuario" value="aluno">
+              <label class="text" for="aluno">Aluno</label>
           </div>
         </div>
       </div>
     </div>
     <!-- Path to Framework7 Library JS-->
-    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <script type="text/javascript" src="../js/framework7.min.js"></script>
     <!-- Path to your app js-->
-    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="../js/scripts.js"></script>
   </body>
 </html>
