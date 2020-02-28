@@ -40,11 +40,26 @@
           </div>
           <!-- Scrollable page content -->
           <div class="page-content">
-            <div style="text-align: center">
-              <div class="text">Selecione seu tipo de usuário: </div><br>
-              <button class="button margin-left" style="display: inline;" onclick="document.location = 'signup-professor.html'">Professor</button>
-              <button class="button margin-left" style="display: inline;" onclick="document.location = 'signup-aluno.html'">Aluno</button>
-            </div>
+            <form method="POST">
+                <table class="formtable">
+                    <tr>
+                        <td class="formtd"><label class="label">Nome completo:</label></td>
+                        <td class="formtd"><input name="nome" id="nome" class="input" type="text" placeholder="Nome Completo" maxlength="120"></td>
+                    </tr>
+                    <tr>
+                        <td class="formtd"><label class="label">CPF:</label></td>
+                        <td class="formtd"><input name="cpf" id="cpf" class="input" type="text" placeholder="Somente Números" maxlength="11"></td>
+                    </tr>
+                    <tr>
+                        <td class="formtd"><label class="label">E-mail:</label></td>
+                        <td class="formtd"><input name="email" id="email" class="input" type="text" placeholder="email@email.com" maxlength="60"></td>
+                    </tr>
+                    <tr>
+                        <td class="formtd"><label class="label">Senha:</label></td>
+                        <td class="formtd"><input name="senha" id="senha" class="input" type="password" placeholder="Senha" maxlength="120"></td>
+                    </tr>
+                </table>
+            </form>
           </div>
         </div>
       </div>
